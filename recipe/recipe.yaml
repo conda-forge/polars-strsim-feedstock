@@ -16,7 +16,7 @@ build:
     content:
       - python -m pip install . -vv
       - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -33,7 +33,7 @@ requirements:
   run:
     - python
     - polars >1.2,<2.0
-  
+
 tests:
   - python:
       imports:
@@ -52,7 +52,7 @@ about:
     Sørensen-Dice
     Each similarity measure returns a value normalized between 0.0 and 1.0 (inclusive), where 0.0 indicates the inputs are maximally different and 1.0 means the strings are maximally similar.
   license: MIT
-  license_file: 
+  license_file:
     - LICENSE
     - THIRDPARTY.yml
   repository: https://github.com/foxcroftjn/polars-strsim
